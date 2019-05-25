@@ -11,12 +11,7 @@ class _ChatState extends State<Chat> {
   
   Widget build(BuildContext context) {
     return Center(
-      child:     IconButton(
-        icon: Icon(Icons.add),
-        onPressed: () {
-          Navigator.pushNamed(context, '/widget');
-        },
-      ),
+      child: Text('hello, chats')
     );
   }
 }

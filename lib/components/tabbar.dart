@@ -1,34 +1,17 @@
 import 'package:flutter/material.dart';
-import 'chats.dart';
-import 'contacts.dart';
-import 'discover.dart';
+import 'package:lark/models/tabbar.dart';
 
-// Pages
-List<Widget> _pages = [
-  Chat(),
-  Contacts(),
-  Discover(),
-];
-
-// Actions
-List<List<Widget>> _actions = [
-  <Widget>[],
-  <Widget>[],
-  <Widget>[],
-];
-
-// UI
-class LarkScaffold extends StatefulWidget {
-  const LarkScaffold({ Key key, this.title }) : super(key: key);
-  final String title;
+class TabBarPages extends StatefulWidget {
+  const TabBarPages({ Key key }) : super(key: key);
 
   @override
-  _LarkScaffoldState createState() => _LarkScaffoldState();
+  _TabBarPagesState createState() => _TabBarPagesState();
 }
 
-class _LarkScaffoldState extends State<LarkScaffold> {
-  int _currentIndex = 0;  
-
+class _TabBarPagesState extends State<TabBarPages> {
+  int _currentIndex = 0;
+  TabBarModel model = TabBarModel();
+  
   void onTabTapped(int index) {
     setState(() { _currentIndex = index; });
   }
@@ -37,16 +20,16 @@ class _LarkScaffoldState extends State<LarkScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-        actions: _actions[_currentIndex]
+        title: model.titles[_currentIndex],
+        actions: model.actions[_currentIndex],
+        leading: model.leadings[_currentIndex]
       ),
-      body: _pages[_currentIndex], 
+      body: model.pages[_currentIndex], 
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Theme.of(context).primaryColorDark,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
