@@ -29,6 +29,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.14.11"
+  convert:
+    dependency: transitive
+    description:
+      name: convert
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.1"
+  crypto:
+    dependency: transitive
+    description:
+      name: crypto
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.6"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -36,6 +50,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.2"
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.10.9"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -46,6 +67,27 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_webview_plugin:
+    dependency: "direct main"
+    description:
+      name: flutter_webview_plugin
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.5"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.12.0+2"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.1.3"
   matcher:
     dependency: transitive
     description:
@@ -61,12 +103,28 @@ packages:
     source: hosted
     version: "1.1.6"
   path:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.6.2"
+  path_provider:
+    dependency: "direct main"
+    description:
+      name: path_provider
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.0"
+  pbkdf2:
+    dependency: transitive
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "312dd5507b18525d81bf4a16d949c31e6fcdba57"
+      url: "https://github.com/jamesots/pbkdf2"
+    source: git
+    version: "2.1.0"
   pedantic:
     dependency: transitive
     description:
@@ -74,6 +132,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.5.0"
+  protobuf:
+    dependency: transitive
+    description:
+      name: protobuf
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.10.8"
   quiver:
     dependency: transitive
     description:
@@ -81,6 +146,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.2"
+  rethinkdb_dart:
+    dependency: "direct main"
+    description:
+      name: rethinkdb_dart
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.3.2+5"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -93,6 +165,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.5.5"
+  sqflite:
+    dependency: "direct main"
+    description:
+      name: sqflite
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.5"
   stack_trace:
     dependency: transitive
     description:
@@ -114,6 +193,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.4"
+  synchronized:
+    dependency: transitive
+    description:
+      name: synchronized
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.1.0"
   term_glyph:
     dependency: transitive
     description:
@@ -128,6 +214,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.4"
+  tweetnacl:
+    dependency: "direct main"
+    description:
+      name: tweetnacl
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.1"
   typed_data:
     dependency: transitive
     description:
@@ -135,6 +228,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.6"
+  uuid:
+    dependency: "direct main"
+    description:
+      name: uuid
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.0"
   vector_math:
     dependency: transitive
     description:
@@ -144,3 +244,4 @@ packages:
     version: "2.0.8"
 sdks:
   dart: ">=2.2.0 <3.0.0"
+  flutter: ">=1.2.1 <2.0.0"
