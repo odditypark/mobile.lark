@@ -1,0 +1,9 @@
+[package]
+name = "actix-server"
+version = "0.1.0"
+authors = ["clearloop <udtrokia@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+env_logger = "0.6.1"
+actix-web = "1.0.0-rc"
