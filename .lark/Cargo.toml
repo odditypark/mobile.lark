@@ -3,7 +3,16 @@ name = "actix-server"
 version = "0.1.0"
 authors = ["clearloop <udtrokia@gmail.com>"]
 edition = "2018"
+publish=false
+
+[[bin]]
+name = "actix-server"
+path = "actix/main.rs"
+
+[lib]
+path = "actix/lib.rs"
 
 [dependencies]
+log = "0.4.6"
 env_logger = "0.6.1"
 actix-web = "1.0.0-rc"

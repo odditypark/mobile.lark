@@ -1,8 +1,12 @@
+#[macro_use]
+extern crate log;
 use actix_web::{middleware, App, HttpServer};
 
 fn main() -> std::io::Result<()> {
-    std::env::set_var("RUST_LOG", "main=actix_web");
-    env_logger::init();
+    // std::env::set_var("RUST_LOG", "main=actix_web");
+    env_logger::init_from_env(
+        env_logger::Env::default().default_filter_or("info")
+    );
 
     let app = || App::new()
         .wrap(middleware::Logger::new("%r %s"))
@@ -11,7 +15,7 @@ fn main() -> std::io::Result<()> {
         .service(actix_server::no_params)
         .service(actix_server::index);
 
-    println!("server start at port 6666...");
+    info!("server start at port 6666...");
     HttpServer::new(app)
         .bind("127.0.0.1:6666")?
         .workers(1)
