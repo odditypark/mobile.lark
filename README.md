@@ -3,10 +3,6 @@
 
 ## User IDentifier
 
-+ userid -> [Universally Unique IDentifier][1]
-+ -> server -> RSA 
-
-
 
 ## UX
 
