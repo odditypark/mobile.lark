@@ -34,9 +34,8 @@ readonly SWAGER_EDITOR='swaggerapi/swagger-editor';
 # [0]: https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#docker
 ###
 ui() {
-    echo "\033[0;32mStart docker container ${SWAGER_EDITOR} at 3000...\033[0m"
     if ! docker ps | grep "${SWAGER_UI}" > '/dev/null' 2>&1; then
-	echo "Start docker container ${SWAGER_UI} ..."
+	echo "\033[0;32mStart docker container ${SWAGER_UI} at 3000...\033[0m"
 	docker rm "${SWAGER_UI}" > '/dev/null' 2>&1
 	docker run -p 80:3000 swaggerapi/swagger-ui
 	echo 'Input C-c to stop...'
@@ -84,7 +83,7 @@ editor() {
     if ! docker ps | grep "${SWAGER_EDITOR}" > '/dev/null' 2>&1; then
 	echo "\033[0;32mStart docker container ${SWAGER_EDITOR} at 5000...\033[0m"
 	docker rm "${SWAGER_EDITOR}" > '/dev/null' 2>&1
-	docker run -d -p 80:8080 swaggerapi/swagger-editor
+	docker run -d --name editor -p 5000:8080 swaggerapi/swagger-editor
     fi
 }
 

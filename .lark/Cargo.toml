@@ -13,6 +13,9 @@ path = "actix/main.rs"
 path = "actix/lib.rs"
 
 [dependencies]
+hex = "0.3.2"
 log = "0.4.6"
+uuid = "0.7.4"
+rand = "0.6.5"
 env_logger = "0.6.1"
 actix-web = "1.0.0-rc"

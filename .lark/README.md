@@ -4,7 +4,10 @@ start multi servers.
 
 + `actix` for relay proxy.
 + `reql` for rethinkdb.
-+ `swagger` for api docs
+  + curd
+
+## API Design
+
 
 
 ## Style Guide
